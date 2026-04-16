@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="my-bookings.html">My Bookings</a>
+      <a href="admin.html">Admin</a>
+    </div>
+    <div id="nav-auth">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="hero">
+      <h1>Now Showing</h1>
+      <p>Pick a movie, explore showtimes, and book in a few clicks.</p>
+    </div>
+    <div class="toolbar">
+      <input id="movie-search" type="text" placeholder="Search by title or genre">
+      <span id="movie-count" class="meta"></span>
+    </div>
+    <div id="movie-list" class="movie-grid"></div>
+    <p id="message" class="error"></p>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

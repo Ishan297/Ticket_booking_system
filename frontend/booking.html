@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Seats</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="my-bookings.html">My Bookings</a>
+    </div>
+    <div id="nav-auth"></div>
+  </nav>
+  <div class="container">
+    <h1>Select Seats</h1>
+    <div id="showtime-info"></div>
+    <div id="seats" class="seat-layout"></div>
+    <p>Selected: <span id="selected-count">0</span> seats. Total: ₹<span id="total-amount">0</span></p>
+    <button type="button" class="btn" id="proceed-btn" disabled>Proceed to Pay</button>
+    <p id="message" class="error"></p>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

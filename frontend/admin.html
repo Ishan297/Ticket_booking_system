@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Add Movies, Theaters, Shows</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="my-bookings.html">My Bookings</a>
+      <a href="admin.html">Admin</a>
+    </div>
+    <div id="nav-auth"></div>
+  </nav>
+  <div class="container">
+    <h1>Admin</h1>
+    <p>Add movies, theaters, screens, and showtimes.</p>
+
+    <div class="admin-section">
+      <h2>Add Movie</h2>
+      <form id="form-movie">
+        <label>Title</label>
+        <input type="text" name="title" required>
+        <label>Description</label>
+        <input type="text" name="description">
+        <label>Duration (min)</label>
+        <input type="number" name="durationMin" required min="1">
+        <label>Genre</label>
+        <input type="text" name="genre">
+        <label>Language</label>
+        <input type="text" name="language">
+        <button type="submit">Add Movie</button>
+      </form>
+    </div>
+
+    <div class="admin-section">
+      <h2>Add Theater</h2>
+      <form id="form-theater">
+        <label>Name</label>
+        <input type="text" name="name" required>
+        <label>City</label>
+        <input type="text" name="city" required>
+        <label>Address</label>
+        <input type="text" name="address">
+        <button type="submit">Add Theater</button>
+      </form>
+    </div>
+
+    <div class="admin-section">
+      <h2>Add Screen (to a theater)</h2>
+      <form id="form-screen">
+        <label>Theater ID</label>
+        <input type="number" name="theaterId" required>
+        <label>Screen name</label>
+        <input type="text" name="name" required>
+        <label>Capacity</label>
+        <input type="number" name="capacity" value="50" min="1">
+        <button type="submit">Add Screen</button>
+      </form>
+    </div>
+
+    <div class="admin-section">
+      <h2>Add Showtime</h2>
+      <form id="form-showtime">
+        <label>Movie ID</label>
+        <input type="number" name="movieId" required>
+        <label>Screen ID</label>
+        <input type="number" name="screenId" required>
+        <label>Start (YYYY-MM-DDTHH:mm)</label>
+        <input type="datetime-local" name="startTime" required>
+        <label>End (YYYY-MM-DDTHH:mm)</label>
+        <input type="datetime-local" name="endTime" required>
+        <label>Price per seat (₹)</label>
+        <input type="number" name="pricePerSeat" step="0.01" required>
+        <button type="submit">Add Showtime</button>
+      </form>
+    </div>
+
+    <p id="message" class="error"></p>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

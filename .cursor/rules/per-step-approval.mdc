@@ -1,0 +1,19 @@
+---
+description: Require explicit approval before any file edits or apply_patch
+alwaysApply: true
+---
+
+# Per-step approval (mandatory)
+
+Before changing the codebase or using tools that modify files (`apply_patch`, `Write`, `Delete`, shell commands that write project files):
+
+1. **Plan first** — Summarize what you will do in plain language (no code blocks required for the initial ask).
+2. **List files** — Name every file you intend to create, edit, or delete.
+3. **Wait** — Do not run `apply_patch`, `Write`, `Delete`, or destructive/editing shell commands until the user clearly approves (e.g. “yes”, “go ahead”, “approved”, “proceed”).
+
+If the user’s message only describes a goal or bug, treat this as a request for a **plan + approval**, not permission to edit immediately.
+
+**Exceptions (only when the user explicitly says so in that message):**
+
+- “Just apply it” / “make the changes” / “no need to ask” → you may edit without the approval step for that request only.
+- Read-only work (reading files, search, explaining code) does not require approval.
