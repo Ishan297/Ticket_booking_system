@@ -2,9 +2,7 @@
 services:
   - type: web
     name: movie-booking-api
-    runtime: java
     rootDir: backend
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/movie-booking-1.0.0.jar
+    env: docker
     plan: free
     healthCheckPath: /api/movies
